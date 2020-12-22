@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+  
+  <title>Android开发第二天-Demo完成 - #的秘密基地</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
+  <meta name="description" content="今天是自学第二天，居然把DEMO做了出来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android开发第二天-Demo完成">
+<meta property="og:url" content="https://minami373.me/2020/12/08/2020-12-08-Android%E5%BC%80%E5%8F%91%E7%AC%AC%E4%BA%8C%E5%A4%A9-Demo%E5%AE%8C%E6%88%90/index.html">
+<meta property="og:site_name" content="#的秘密基地">
+<meta property="og:description" content="今天是自学第二天，居然把DEMO做了出来">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://minami373-1251572732.cos.ap-beijing.myqcloud.com/-78ef40e3317ec565.jpg">
+<meta property="og:image" content="https://minami373-1251572732.cos.ap-beijing.myqcloud.com/Screenshot_20201208_212909.jpg">
+<meta property="og:image" content="https://minami373-1251572732.cos.ap-beijing.myqcloud.com/20201208213846.png">
+<meta property="og:image" content="https://minami373-1251572732.cos.ap-beijing.myqcloud.com/12345.jpg">
+<meta property="article:published_time" content="2020-12-08T21:33:22.000Z">
+<meta property="article:modified_time" content="2020-12-22T12:47:09.193Z">
+<meta property="article:author" content="#">
+<meta property="article:tag" content="日常">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://minami373-1251572732.cos.ap-beijing.myqcloud.com/-78ef40e3317ec565.jpg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
+  
+  <link rel="stylesheet" href="/css/style.css?v=1608641250327">
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://minami373-1251572732.cos.ap-beijing.myqcloud.com/bck.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="#" class="mdui-btn mdui-btn-icon"><img src="https://minami373-1251572732.cos.ap-beijing.myqcloud.com/minami.jpg" alt="#"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="#">
+            <img src="https://minami373-1251572732.cos.ap-beijing.myqcloud.com/minami.jpg" alt="#" alt="#">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>5</div>
+        <div><span>标签</span>2</div>
+        <div><span>分类</span>2</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://www.baidu.com/search?q=" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="/" target="_blank" mdui-tooltip="{content: 'QQ群'}" style="color: rgb(249, 174, 8);background-color: rgba(249, 174, 8, .1);">
+            <i class="nexmoefont icon-QQ"></i>
+        </a><a class="mdui-ripple" href="https://space.bilibili.com/292660247" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/1431241631" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/日常/">日常</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/考试/">考试</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 20px;">日常</a> <a href="/tags/%E9%A2%98%E5%BA%93/" style="font-size: 10px;">题库</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+
+<style>
+.nexmoe-widget .archive-list-count{
+	position : absolute;
+	right: 15px;
+	top:9px;
+	color: #DDD;
+}
+</style>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">最新文章</h3>
+    <div class="nexmoe-widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/22/%E7%AE%80%E7%AD%94%E9%A2%98%E9%A2%98%E5%BA%93/">移动开发题库</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/08/2020-12-08-Android%E5%BC%80%E5%8F%91%E7%AC%AC%E4%BA%8C%E5%A4%A9-Demo%E5%AE%8C%E6%88%90/">Android开发第二天-Demo完成</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/07/2020-12-07-Android%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/">Android开发学习第一天</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/06/2020-12-6-%E6%83%B3%E8%87%AA%E5%AD%A6%E5%AE%89%E5%8D%93/">打算自学安卓开发</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/06/2020-12-6-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">第一篇博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2020 #
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 62.5%;"> 
+          <img data-src="https://minami373-1251572732.cos.ap-beijing.myqcloud.com/-589842771.jpg" data-sizes="auto" alt="Android开发第二天-Demo完成" class="lazyload">
+          <h1>Android开发第二天-Demo完成</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年12月08日</a>
+    <a><i class="nexmoefont icon-areachart"></i>164 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+</div>
+
+  <div class="nexmoe-post-right">
+    
+      <div class="nexmoe-fixed">
+        <div class="nexmoe-valign">
+            <div class="nexmoe-toc">
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DEMO%E8%AF%9E%E7%94%9F"><span class="toc-number">1.</span> <span class="toc-text">DEMO诞生</span></a></li></ol>
+            </div>
+        </div>
+      </div>
+    
+  </div>
+
+  <article>
+    <p>今天是自学第二天，居然把DEMO做了出来</p>
+<a id="more"></a>
+<h1 id="DEMO诞生"><a href="#DEMO诞生" class="headerlink" title="DEMO诞生"></a>DEMO诞生</h1><p>今天上课看了书上的内容，发现语法什么的没有问题，只是在安卓的UI布局上需要看看</p>
+<p>然后在网上搜了一下安卓的UI框架发现都挺帅的，然后就想先把效果实现一下哈哈哈。</p>
+<p><img src="https://minami373-1251572732.cos.ap-beijing.myqcloud.com/-78ef40e3317ec565.jpg"></p>
+<p>然后一顿花里胡哨的操作<br><img src="https://minami373-1251572732.cos.ap-beijing.myqcloud.com/Screenshot_20201208_212909.jpg"><br>这个略显low的DEMO就诞生了<br>我自己在电脑上听不见，还以为翻车了哈哈哈<br><img src="https://minami373-1251572732.cos.ap-beijing.myqcloud.com/20201208213846.png"><br>emmm，后边就是UI美化，和一些花里胡哨的操作，反人类操作去掉。<br>明天上课干哈哈哈<br><img src="https://minami373-1251572732.cos.ap-beijing.myqcloud.com/12345.jpg"></p>
+
+  </article>
+
+  
+    
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>#<br>
+    <strong>本文链接：</strong><a href="https://minami373.me/2020/12/08/2020-12-08-Android%E5%BC%80%E5%8F%91%E7%AC%AC%E4%BA%8C%E5%A4%A9-Demo%E5%AE%8C%E6%88%90/" title="https:&#x2F;&#x2F;minami373.me&#x2F;2020&#x2F;12&#x2F;08&#x2F;2020-12-08-Android%E5%BC%80%E5%8F%91%E7%AC%AC%E4%BA%8C%E5%A4%A9-Demo%E5%AE%8C%E6%88%90&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;minami373.me&#x2F;2020&#x2F;12&#x2F;08&#x2F;2020-12-08-Android%E5%BC%80%E5%8F%91%E7%AC%AC%E4%BA%8C%E5%A4%A9-Demo%E5%AE%8C%E6%88%90&#x2F;</a><br>
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E6%97%A5%E5%B8%B8/">日常</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a>
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: 'e7a01d8589e29118a291',
+        clientSecret: '881c8120a441a374c8fbab146cdf6f8ca44013f4',
+        id: window.location.pathname,
+        repo: '1431241631.github.io',
+        owner: '1431241631',
+        admin: '1431241631'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+  </div>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+ <script src="/js/app.js?v=1608641250329"></script>
+
+  
+
+
+
+
+
+</body>
+
+</html>
